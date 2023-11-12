@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Security</title>
+</head>
+
+<body>
+    <div id="registrationSection">
+        <form id="registrationForm" method="post", action="/register">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+
+            <label for="password">Lozinka:</label>
+            <input type="password" name="password" id="password">
+
+            <label for="vulnerability">Ranjivost Uključena: </label>
+            <input type="checkbox" name="checkbox" id="vulnerability">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    
+    <div id="aboutMeContent" style="display: none;">
+        <p>Here is what you said about yourself:</p>
+        <p id="aboutMeText"></p>
+    </div>
+
+    <script src="./public/index.js"></script>
+</body>
+
+</html>
