@@ -7,6 +7,8 @@
 </head>
 
 <body>
+    <h1>Cross-site scripting (XSS)</h1>
+    <p>XSS je omogućen u sljdećem koraku pri unosu podatka "o meni" koji će se prikazati kada se pritisne submit.</p>
     <div id="registrationSection">
         <form id="registrationForm" method="post", action="/register">
             <label for="email">Email:</label>
@@ -22,11 +24,8 @@
         </form>
     </div>
 
-    
-    <div id="aboutMeContent" style="display: none;">
-        <p>Here is what you said about yourself:</p>
-        <p id="aboutMeText"></p>
-    </div>
+    <h1>Nesigurna pohrana osjetljivih podataka (Sensitive Data Exposure)</h1>
+    <p>Prilikom prijave ako se omogući ranjivost moguće je doći do Robots.txt dokumenta u kojem se nalazi putanja do dokumenta koji sadrži email adrese i lozinke.</p>
 
     <script src="./public/index.js"></script>
 </body>

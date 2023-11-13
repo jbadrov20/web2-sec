@@ -7,10 +7,11 @@
 </head>
 
 <body>
+    <h1>Cross-site scripting (XSS)</h1>
     <div id="aboutMeSection">
         <form id="aboutMeForm" method="post", action="/aboutMe">
-            Hello! Say something about yourself:
-            <textarea id="aboutMe" name="aboutMe"></textarea>
+            Hello! Say something about yourself: <br>
+            <textarea id="aboutMe" name="aboutMe" style="height: 200px; width: 500px;"></textarea> <br>
 
             <label for="vulnerabilitySDE">Ranjivost Uključena: </label>
             <input type="checkbox" name="vulnerable" id="vulnerabilitySDE">
