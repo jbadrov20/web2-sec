@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Security</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Cross-site scripting (XSS)</h1>
-    <p>XSS je omogućen u sljdećem koraku pri unosu podatka "o meni" koji će se prikazati kada se pritisne submit.</p>
+    <p>
+      XSS je omogućen u sljdećem koraku pri unosu podatka "o meni" koji će se
+      prikazati kada se pritisne submit.
+    </p>
     <div id="registrationSection">
-        <form id="registrationForm" method="post", action="/register">
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email">
+      <form id="registrationForm" method="post" , action="/register">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" />
 
-            <label for="password">Lozinka:</label>
-            <input type="password" name="password" id="password">
+        <label for="password">Lozinka:</label>
+        <input type="password" name="password" id="password" />
 
-            <label for="vulnerability">Ranjivost Uključena: </label>
-            <input type="checkbox" name="checkbox" id="vulnerability">
+        <label for="vulnerability">Ranjivost Uključena: </label>
+        <input type="checkbox" name="checkbox" id="vulnerability" />
 
-            <button type="submit">Submit</button>
-        </form>
+        <button type="submit">Submit</button>
+      </form>
     </div>
 
-    <h1>Nesigurna pohrana osjetljivih podataka (Sensitive Data Exposure)</h1>
-    <p>Prilikom prijave ako se omogući ranjivost moguće je doći do Robots.txt dokumenta u kojem se nalazi putanja do dokumenta koji sadrži email adrese i lozinke.</p>
+    <h1>Loša kontrola pristupa (Broken Access Control)</h1>
+    <div id="adminSection">
+      <form id="adminForm" method="get" , onsubmit="fetchUserData(event)">
+        <label for="pass">Admin lozinka:</label>
+        <input type="password" name="pass" id="pass" />
 
-    <script src="./public/index.js"></script>
-</body>
+        <label for="username">Email:</label>
+        <input type="text" name="username" id="username" />
 
+        <label for="vulnerability2">Ranjivost Uključena: </label>
+        <input type="checkbox" name="vulnerability2" id="vulnerability2" />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <p id="userInfo"></p>
+
+    <script src="./index.js"></script>
+  </body>
 </html>

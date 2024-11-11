@@ -8,6 +8,9 @@
 
 <body>
     <h1>Cross-site scripting (XSS)</h1>
+    <p>
+        Može se istestirati sa naredbom alert ako je ranjivost uključena, ako nije, bit će nedopušteno.
+    </p>
     <div id="aboutMeSection">
         <form id="aboutMeForm" method="post", action="/aboutMe">
             Hello! Say something about yourself: <br>
@@ -19,5 +22,6 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+    <p id="aboutMeInfo" style="display: none;"></p>
 </body>
 </html>

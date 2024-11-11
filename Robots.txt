@@ -1,1 +1,0 @@
-Disallow: /passwords/passwords.txt
